@@ -1,0 +1,74 @@
+$if(has-frontmatter)$
+\frontmatter
+$endif$
+
+$if(title)$
+\maketitle
+$endif$
+
+% [[ PRELIMINARY PAGES ]]
+%
+% The following sections will read in the .tex files for all the preliminary
+% pages that need to come before the Table of Contents. The preliminary
+% pages after the Table of Contents can be found and edited in the root
+% directory in the file index.qmd. Refer to the included McMaster Guidance
+% document for the preparation of Master's theses and Doctoral dissertations
+%
+%
+% [[ DESCRIPTIVE NOTE ]]
+%
+\clearpage
+\chapter*{}
+\vspace{-4cm}
+\doublespacing\normalsize\sf{
+$thesis.degreetype$ ($thesis.submityear$) \hfill $thesis.institution$ \\
+$thesis.affiliation$ \hfill $thesis.location$
+
+\vspace*{3cm}
+\begin{tabular}{ll}
+        TITLE:           & \parbox[t]{4in}{$title$} \\ \\
+        AUTHOR:          & \parbox[t]{4in}{$author$, Degrees (Institutions)} \\ \\
+        SUPERVISOR:      & \parbox[t]{4in}{$thesis.supervisor$} \\ \\
+        NUMBER OF PAGES: & \parbox[t]{4in}{PrelimPages, DocPages} \\
+        %NUMBER OF PAGES: & \parbox[t]{4in}{\pageref{NumPrefacePages}, \pageref{NumDocumentPages}}
+\end{tabular}
+%TODO: GET A COUNTER FIGURED OUT FOR THE PAGES TO UPDATE AUTOMATICALLY
+}
+\vspace*{\baselineskip}
+\setcounter{page}{2}
+\clearpage
+
+
+% [[ LAY ABSTRACT ]]
+%
+\clearpage
+\chapter*{\sffamily Lay abstract}
+\addcontentsline{toc}{chapter}{Lay abstract}
+\doublespacing\normalsize\rm\input{preliminary-pages/lay-abstract.tex}
+\vspace*{\baselineskip}
+\setcounter{page}{3}
+
+
+% [[ ABSTRACT ]]
+%
+\clearpage
+\chapter*{\sffamily Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+\doublespacing\normalsize\rm\input{preliminary-pages/abstract.tex}
+\vspace*{\baselineskip}
+\setcounter{page}{4}
+
+% [[ ACKNOWLEDGEMENTS ]]
+%
+\clearpage
+\chapter*{\sffamily Acknowledgements}
+\addcontentsline{toc}{chapter}{Acknowledgements}
+\doublespacing\normalsize\rm\input{preliminary-pages/acknowledgements.tex}
+\vspace*{\baselineskip}
+
+% [[ DEDICATION ]]
+%
+\clearpage
+\chapter*{}
+\doublespacing\normalsize\rm\input{preliminary-pages/dedication.tex}
+\vspace*{\baselineskip}

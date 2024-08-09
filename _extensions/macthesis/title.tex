@@ -1,0 +1,23 @@
+\def\maketitle{
+\pagenumbering{roman}
+
+{\sf\thispagestyle{empty}%
+  \vspace*{4cm}
+  \begin{center}\fontsize{24}{28}\sf
+     \MakeUppercase{$thesis.halftitle$}\\[2cm]
+  \end{center}
+  \newpage\mbox{}\thispagestyle{empty}
+}
+
+{\sf\thispagestyle{empty}%
+  \vspace*{4cm}
+  \begin{center}\fontsize{24}{28}\sf
+     \MakeUppercase{\textbf{$title$}}\\[2cm]
+     \fontsize{18}{20}\sf By \MakeUppercase{$author$}, \fontsize{13}{15}\sf $thesis.degrees$\\
+     \vspace*{4cm}
+     \fontsize{13}{15}\sf A thesis submitted to the School of Graduate Studies in partial fulfilment of the requirements for the Degree $thesis.degreetype$\\
+     \vspace*{2cm}
+     $thesis.institution$ \textcopyright\ Copyright by $author$, $thesis.submitmonth$ $thesis.submityear$
+  \end{center}
+}
+}

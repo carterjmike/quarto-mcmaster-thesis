@@ -1,0 +1,100 @@
+% [[ FONT ]]
+%
+% Serif font to use for main body text
+\usepackage[T1]{fontenc}
+\usepackage[lining,light]{InriaSerif}
+\renewcommand*\oldstylenums[1]{{\fontfamily{InriaSerif-OsF}\selectfont #1}}
+%% The font package uses mweights.sty which has som issues with the
+%% \normalfont command. The following two lines fixes this issue.
+\let\oldnormalfont\normalfont
+\def\normalfont{\oldnormalfont\mdseries}
+%\usepackage[light]{merriweather}
+%
+% Sans serif font to use for headings
+\usepackage[sfdefault,light]{roboto}
+%
+% This package will allow the use of icons if needed
+% See https://ctan.org/pkg/fontawesome?lang=en for more information
+\usepackage{fontawesome}
+
+
+% [[ HEADERS AND FOOTERS ]]
+%
+% TODO: FIX FANCY PAGE ONE TO BE CORRECT
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\rfoot{\Large\sffamily\raisebox{-0.1cm}{\textbf{\thepage}}}
+\makeatletter
+\lhead{\textsf{\expandafter{\@title}}}
+\makeatother
+\rhead{}
+\cfoot{}
+\setlength{\headheight}{15pt}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\fancypagestyle{plain}{%
+\fancyhf{} % clear all header and footer fields
+\fancyfoot[C]{\sffamily\thepage} % except the center
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+
+
+% [[ SECTION TITLES ]]
+%
+% TODO: TAKE SOME FROM GRANTS TO BE IN LINE WITH APA
+% THIS IS WHERE THE PARAGRAPH ERROR HAPPENS!! FIX!!
+\usepackage[compact,sf,bf]{titlesec}
+\titleformat*{\section}{\Large\sf\bfseries}
+\titleformat*{\subsection}{\large\sf\bfseries}
+\titleformat*{\subsubsection}{\sf\bfseries}
+\titlespacing{\section}{0pt}{2ex}{.5ex}
+\titlespacing{\subsection}{0pt}{1.5ex}{0ex}
+\titlespacing{\subsubsection}{0pt}{.5ex}{0ex}
+%
+%\usepackage[compact]{titlesec}
+%\titlespacing{\section}{0pt}{2ex}{.5ex}
+%\titleformat*{\section}{\Large\sf\bfseries}
+%\titleformat*{\section}{\Large\bfseries\sf}
+
+%\titlespacing{\subsection}{0pt}{1.5ex}{0ex}
+%\titleformat*{\subsection}{\large\bfseries\sf}
+
+%\titlespacing{\subsubsection}{0pt}{*0}{*0}
+%\titleformat{\subsubsection}[runin]% runin puts it in the same paragraph
+%    {\normalfont\bfseries\sf}% formatting commands to apply to the whole heading
+%    {\thesubsubsection.}% the label and number
+%    {0.5em}% space between label/number and subsubsection title
+%    {}% formatting commands applied just to subsubsection title
+%    [.\,]% punctuation or other commands following subsubsection title
+%\titlespacing*{\subsubsection}{0pt}{0pt}{0ex}
+
+
+% [[ PAGE SETTINGS ]]
+%
+\usepackage{pdflscape}
+\clubpenalty = 2000
+\widowpenalty = 2000
+\usepackage{microtype}
+
+
+% [[ MATHS ]]
+%
+% TODO: ALSO LOOK AT GRANTS FOR ADDITIONAL THINGS
+\usepackage{bm,amsmath}
+\allowdisplaybreaks
+
+
+% [[ CAPTIONS, FIGURES, AND TABLES ]]
+%
+% TODO: FINALIZE THESE ONCE READY TO COMPLETE AN EXAMPLE
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{tabularray}
+\UseTblrLibrary{booktabs}
+
+
+% [[ DUMMY TEXY ]]
+%
+\usepackage{lipsum}
+\usepackage{blindtext}

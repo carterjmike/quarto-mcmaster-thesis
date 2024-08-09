@@ -1,0 +1,33 @@
+title: macthesis # (based on August 2021 guidance document)
+author: Michael J. Carter
+version: 1.0.0
+contributes:
+  formats:
+    pdf:
+      date-format: "MMM DD YYYY"
+      documentclass: report
+      pdf-engine: pdflatex
+      papersize: letter
+      geometry:
+        - left=3.8cm
+        - top=3.8cm
+        - right=2.5cm
+        - bottom=2.5cm
+      fontsize: 12pt  # or 11pt
+      linestretch: 1.5
+      block-headings: false
+      toc-depth: 2
+      number-depth: 2
+      number-sections: true
+      lof: true
+      lot: true
+      include-in-header:
+        - preamble.tex
+      template-partials:
+        - title.tex
+        - before-body.tex
+      knitr:
+        opts_chunk:
+          echo: false
+          warning: false
+          message: false

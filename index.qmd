@@ -1,0 +1,15 @@
+# List of abbreviations and symbols {-}
+
+Must include with their appropriate definitions.
+
+# Declaration of academic achievement {-}
+
+The student will declare his/her research contribution and, as appropriate, those of colleagues or other contributors to the contents of the thesis.
+
+
+<!--
+---- DO NOT REMOVE ----
+The code below will reset and change the page number style as required
+by the guideline document.
+-->
+\clearpage\pagenumbering{arabic}\setcounter{page}{1}

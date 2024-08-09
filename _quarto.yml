@@ -1,0 +1,35 @@
+project:
+  type: book
+  output-dir: "_rendered"
+
+book:
+  title: "My thesis title" # Sentence case > title case
+  author: "First Last"
+  chapters:
+    - index.qmd
+    - chapters/01_lit-review.qmd
+    - chapters/02_intro.qmd
+    - chapters/references.qmd
+  output-file: thesis
+
+csl: apa.csl
+bibliography:
+  - references.bib
+
+thesis:
+  halftitle: "Half title page" # Max 60 characters including spaces
+  degreetype: "Master of Science" # or Doctor of Philosophy
+  submitmonth: "Month"
+  submityear: "YYYY"
+  institution: "McMaster University"
+  affiliation: "Department of Kinesiology"
+  location: "Hamilton, ON, Canada"
+  degrees: "B.Sc. (Hons)" # list all previous degrees
+  supervisor: "Supervisor name"
+
+format:
+  macthesis-pdf:
+    lof: true
+    lot: true
+    linestretch: 1.5
+    keep-tex: true
