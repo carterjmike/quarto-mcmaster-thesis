@@ -6,10 +6,15 @@ Must include with their appropriate definitions.
 
 The student will declare his/her research contribution and, as appropriate, those of colleagues or other contributors to the contents of the thesis.
 
+### Contributions using CRediT (Contributor Roles Taxonomy)
+
+List roles using CRediT taxonomy (see https://credit.niso.org/)
+
 
 <!--
 ---- DO NOT REMOVE ----
 The code below will reset and change the page number style as required
-by the guideline document.
+by the guideline document. Will also get the total number of preliminary pages.
 -->
+\label{PrelimPages}
 \clearpage\pagenumbering{arabic}\setcounter{page}{1}

@@ -1,17 +1,13 @@
 % [[ FONT ]]
 %
 % Serif font to use for main body text
-\usepackage[T1]{fontenc}
-\usepackage[lining,light]{InriaSerif}
-\renewcommand*\oldstylenums[1]{{\fontfamily{InriaSerif-OsF}\selectfont #1}}
-%% The font package uses mweights.sty which has som issues with the
-%% \normalfont command. The following two lines fixes this issue.
-\let\oldnormalfont\normalfont
-\def\normalfont{\oldnormalfont\mdseries}
-%\usepackage[light]{merriweather}
+\usepackage{libertine}
+\usepackage{libertinust1math}
 %
 % Sans serif font to use for headings
+% Option 'sfdefault' only if the base font of the document is to be sans serif
 \usepackage[sfdefault,light]{roboto}
+\usepackage[T1]{fontenc}
 %
 % This package will allow the use of icons if needed
 % See https://ctan.org/pkg/fontawesome?lang=en for more information
@@ -75,6 +71,7 @@
 \clubpenalty = 2000
 \widowpenalty = 2000
 \usepackage{microtype}
+\usepackage{lastpage}
 
 
 % [[ MATHS ]]
@@ -88,10 +85,15 @@
 %
 % TODO: FINALIZE THESE ONCE READY TO COMPLETE AN EXAMPLE
 \usepackage{caption}
+\captionsetup[figure]{labelfont=bf,labelsep=newline,singlelinecheck=false,font=doublespacing,textfont=it}
+\usepackage[labelfont=normalfont]{subcaption}
+\captionsetup[subfigure]{labelformat=simple,font=singlespacing,justification=justified,textfont={normalfont,small}}
+\renewcommand\thesubfigure{}
 \usepackage{graphicx}
-\usepackage{longtable}
-\usepackage{tabularray}
-\UseTblrLibrary{booktabs}
+%\usepackage{longtable}
+%\usepackage{tabularray}
+%\UseTblrLibrary{booktabs}
+\captionsetup[table]{labelfont=bf,labelsep=newline,singlelinecheck=false,font=doublespacing,textfont=it}
 
 
 % [[ DUMMY TEXY ]]
