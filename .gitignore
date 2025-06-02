@@ -1,3 +1,6 @@
+# Stupid mac os
+.DS_Store
+
 .Rproj.user
 .Rhistory
 .RData
@@ -6,3 +9,5 @@
 /.quarto/
 
 thesis.tex
+
+.DS_STORE
